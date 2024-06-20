@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 border border-dark">
+    <title>Arena Lads</title>
+    <link rel="shortcut icon" href="B1Pr7cWU.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/09f84ebc87.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+    .targeted-col {
+        width: 500px;
+        background-color: red;
+        margin-left: -200px;
+    }
+
+    .designer-text {
+        animation: floating 3s ease-in-out infinite;
+    }
+
+    .designer-text:hover {
+        color: rgb(5, 121, 5) !important;
+        cursor: pointer;
+        transition: .8s;
+    }
+
+    .brr {
+        border: 2px solid red;
+    }
+
+    .bry {
+        border: 2px solid yellow;
+    }
+
+    .brb {
+        border: 2px solid blue;
+    }
+
+    .h-1 {
+        height: 500px;
+    }
+
+    * {
+        padding: 0;
+    }
+
+    .first-section {
+        position: relative;
+        padding: 0;
+    }
+
+    .first-section video {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        object-fit: fill;
+        object-fit: cover;
+        filter: brightness(0.7);
+    }
+
+    .h-1 {
+        height: 535px;
+    }
+
+    .h-2 {
+        height: 100px;
+    }
+
+    .h-3 {
+        height: 520px;
+    }
+
+    .h-4 {
+        height: 500px;
+    }
+
+    .h-5 {
+        height: 250px;
+    }
+
+    .btnfh {
+        font-size: 11px;
+        color: #e1e1e1;
+        font-family: inherit;
+        font-weight: 800;
+        cursor: pointer;
+        position: relative;
+        border: none;
+        background: none;
+        text-transform: uppercase;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+
+    .btnfh:focus,
+    .btnfh:hover {
+        color: #fff;
+    }
+
+    .btnfh:focus:after,
+    .btnfh:hover:after {
+        width: 100%;
+        left: 0%;
+    }
+
+    .btnfh:after {
+        content: "";
+        pointer-events: none;
+        bottom: -2px;
+        left: 50%;
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: #fff;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: width, left;
+    }
+
+    .c-button {
+        color: #000;
+        font-weight: 700;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 0.9em 1.6em;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        z-index: 1;
+    }
+
+    .c-button--gooey {
+        color: #06c8d9;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border: 4px solid #06c8d9;
+        border-radius: 0;
+        position: relative;
+        transition: all 700ms ease;
+    }
+
+    .c-button--gooey .c-button__blobs {
+        height: 100%;
+        filter: url(#goo);
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: -3px;
+        right: -1px;
+        z-index: -1;
+    }
+
+    .c-button--gooey .c-button__blobs div {
+        background-color: #06c8d9;
+        width: 34%;
+        height: 100%;
+        border-radius: 100%;
+        position: absolute;
+        transform: scale(1.4) translateY(125%) translateZ(0);
+        transition: all 700ms ease;
+    }
+
+    .c-button--gooey .c-button__blobs div:nth-child(1) {
+        left: -5%;
+    }
+
+    .c-button--gooey .c-button__blobs div:nth-child(2) {
+        left: 30%;
+        transition-delay: 60ms;
+    }
+
+    .c-button--gooey .c-button__blobs div:nth-child(3) {
+        left: 66%;
+        transition-delay: 25ms;
+    }
+
+    .c-button--gooey:hover {
+        color: #fff;
+    }
+
+    .c-button--gooey:hover .c-button__blobs div {
+        transform: scale(1.4) translateY(0) translateZ(0);
+    }
+
+    @keyframes slides {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-300px)
+        }
+    }
+
+    @keyframes floating {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-5px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .btnTwo:hover a {
+        color: green;
+    }
+
+    .multy-color:hover {
+        animation-name: multycolor;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        transition: 2s;
+    }
+
+    @keyframes multycolor {
+        0% {
+            /* border-image: linear-gradient(to right, grey 25%, yellow 25%, yellow 50%, red 50%, red 75%, teal 75%) 5; */
+            text-align: center;
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+            border-left: 2px solid;
+            border-right: 2px solid;
+            border-image: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 0.9724264705882353) 10%, rgba(208, 222, 33, 1) 20%, rgba(79, 220, 74, 1) 30%, rgba(63, 218, 216, 1) 40%, rgba(47, 201, 226, 1) 50%, rgba(28, 127, 238, 1) 60%, rgba(95, 21, 242, 1) 70%, rgba(186, 12, 248, 1) 80%, rgba(251, 7, 217, 1) 90%, rgba(255, 0, 0, 1) 100%);
+            border-image-slice: 1;
+        }
+
+        100% {
+            text-align: center;
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+            border-left: 2px solid;
+            border-right: 2px solid;
+            border-image: linear-gradient(270deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 0.9724264705882353) 10%, rgba(208, 222, 33, 1) 20%, rgba(79, 220, 74, 1) 30%, rgba(63, 218, 216, 1) 40%, rgba(47, 201, 226, 1) 50%, rgba(28, 127, 238, 1) 60%, rgba(95, 21, 242, 1) 70%, rgba(186, 12, 248, 1) 80%, rgba(251, 7, 217, 1) 90%, rgba(255, 0, 0, 1) 100%);
+            border-image-slice: 1;
+        }
+    }
+
+    .matches_buttons {
+        border-bottom: 2px solid rgba(137, 43, 226, 0.226);
+    }
+
+    .matches_buttons button {
+        width: 223px;
+        height: 43px;
+        border: none;
+        background: none;
+        color: white;
+    }
+
+    .matches_buttons button:hover {
+        background-color: rgba(0, 119, 255, 0.418);
+    }
+
+    .monotise:hover {
+        scale: 1.1;
+    }
+
+    .header-7 h1 {
+        font-size: 15px;
+    }
+
+    .header-8 h1 {
+        font-size: 15px;
+    }
+
+    .header-9 h1 {
+        font-size: 15px;
+    }
+
+    @media all and (max-width: 700px) {
+        .targeted-col {
+            margin: 0;
+            width: 100%;
+        }
+
+        .header-9 h1 {
+            font-size: 11px;
+        }
+
+        .header-8 h1 {
+            font-size: 11px;
+        }
+
+        .header-7 h1 {
+            font-size: 11px;
+        }
+    }
+</style>
+
+<body>
+    <img src="gallery-img-5.webp" alt=""
+        style="width: 100%;height: 100vh;object-fit: cover;z-index: -111;position: fixed;">
+    <div class="container-fluid first-section">
+        <video src="header-video.mp4" loop muted autoplay class="h-1" style="z-index: -111;">
+            <source src="header-video.mp4">
+        </video>
+        <nav class="navbar container navbar-expand-lg">
+            <div class="container-fluid">
+
+                <a class="navbar-brand position-relative p-0" href="index.html"><img src="logo.svg" alt="logo">
+                </a>
+                <button class="navbar-toggler" id="sidebarEvent" type="button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse">
+
+                    <ul
+                        class="navbar-nav position-relative ms-auto mx-5 mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white btnfh " aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link text-white btnfh" href="games.html">Games</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white btnfh" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white btnfh" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link text-white btnfh" href="about.html">Pages</a>
+
+                            <ul class="dropdown-menu fade-up" style="background-color: rgb(9, 4, 83);">
+                                <li><a class="dropdown-item text-white" href="matchschedule.html"> Match Schedule</a>
+                                </li>
+                                <li><a class="dropdown-item text-white" href="blog.html"> Blogs And News </a>
+                                </li>
+                                <li><a class="dropdown-item text-white" href="testimonials.html"> Testimonials </a>
+                                <li><a class="dropdown-item text-white" href="gallery.html"> Gallery </a>
+                                <li><a class="dropdown-item text-white" href="faq.html"> Faq </a>
+                                <li><a class="dropdown-item text-white" href="team.html"> Team </a></li>
+                                <li><a class="dropdown-item text-white" href="contact.html"> Contact Us </a></li>
+                                <li><a class="dropdown-item text-white" href="comingsoon.html"> Coming Soon </a></li>
+                                <li><a class="dropdown-item text-white" href="404.html"> 404 </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="globalBtn">
+                        <ul>
+
+                            <button class="btn btn-outline-success mt-1">Book Now</button>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="text-white text-center fw-bolder mt-5 pt-3"
+            style="  font-family: Encode Sans Condensed, sans-serif;">GAME ON! YOUR GATEWAY TO INFINITE <br> ADVENTURES
+        </h1>
+        <p class="text-center text-white fs-5 mt-3" style="  font-family: Encode Sans Condensed, sans-serif;">UNLEASH
+            YOUR INNER CHAMPION</p>
+        <div class="col-md-12 d-flex justify-content-center mt-4">
+            <button class="text-white me-md-3 fw-bolde"
+                style="font-size: 13px;background: none;padding: 10px 30px;border: 2px solid white;">Become
+                a Member</button>
+            <button class="text-white fw-bolde multy-color"
+                style="font-size: 13px;background: none;padding:10px 30px;border: 2px solid white;">Contact
+                Us</button>
+        </div>
+
+        <div class="col-md-12  h-2" style="margin-top: 80px;background: #0902288f;">
+            <div class="container br  h-100 d-flex" style="padding-right: 150px;">
+                <div class="text  d-flex align-items-center" style="width: 200px;">
+                    <h1 class="text-white text-center fs-6">Our Partner:</h1>
+                </div>
+                <div class="slider py-3 mt-0" style="display: flex;overflow: hidden;">
+                    <div class="slider-img"
+                        style="animation: 20s slides infinite linear;flex: 0 0 142px;display: flex;gap: 100px;">
+
+
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.00285454 40.2989C0.00121972 41.8005 1.11013 43.0721 2.59805 43.2747L16.9674 45.2315C18.768 45.4767 20.3714 44.0775 20.3722 42.2603L20.3781 29.0302C20.3788 27.3795 19.0458 26.0383 17.3952 26.0289L3.03228 25.9472C1.37006 25.9377 0.0170261 27.2816 0.0152164 28.9439L0.00285454 40.2989ZM17.3827 23.8015C19.031 23.7908 20.362 22.4523 20.3633 20.8039L20.3738 7.55943C20.3752 5.73918 18.7684 4.33708 16.9651 4.58501L2.60697 6.55909C1.12207 6.76325 0.0156948 8.03205 0.0155918 9.53093L0.0148109 20.8943C0.0146965 22.5588 1.36975 23.9052 3.03425 23.8944L17.3827 23.8015ZM22.8302 43.4641C22.8302 44.9536 23.9231 46.2176 25.397 46.4327L46.4065 49.4989C48.2166 49.7631 49.8398 48.3597 49.8398 46.5304V29.2722C49.8398 27.6246 48.5111 26.2854 46.8635 26.2723L25.854 26.1057C24.1879 26.0925 22.8302 27.4394 22.8302 29.1056V43.4641ZM46.8501 23.6021C48.5053 23.5994 49.8456 22.2565 49.8452 20.6013L49.8405 3.45219C49.84 1.62891 48.2266 0.227644 46.4212 0.482452L25.4058 3.44851C23.9278 3.65712 22.8279 4.92066 22.8251 6.41336L22.798 20.6308C22.7948 22.2918 24.1419 23.6392 25.8029 23.6365L46.8501 23.6021Z"
+                                fill="white" />
+                        </svg>
+
+                        <svg width="65" height="50" viewBox="0 0 65 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M54.9982 4.15531C50.8814 2.21831 46.4242 0.812431 41.7812 0.000143707C41.7405 -0.00117033 41.7 0.0065404 41.6625 0.0227339C41.6251 0.0389274 41.5916 0.0632104 41.5645 0.0938698C41.0074 1.12485 40.3573 2.46825 39.924 3.49923C34.9993 2.74942 29.9911 2.74942 25.0664 3.49923C24.6331 2.43701 23.9831 1.12485 23.395 0.0938698C23.364 0.0313862 23.2711 0.000143707 23.1783 0.000143707C18.5353 0.812431 14.109 2.21831 9.96126 4.15531C9.9303 4.15531 9.89935 4.18655 9.8684 4.21779C1.44912 16.9332 -0.872373 29.305 0.272896 41.5518C0.272896 41.6142 0.30385 41.6767 0.365756 41.708C5.93734 45.8319 11.2922 48.3312 16.5852 49.9871C16.6781 50.0183 16.771 49.9871 16.8019 49.9246C18.0401 48.2063 19.1544 46.3942 20.1139 44.4885C20.1758 44.3635 20.1139 44.2386 19.9901 44.2073C18.2258 43.52 16.5543 42.7077 14.9138 41.7705C14.79 41.708 14.79 41.5205 14.8828 41.4268C15.2233 41.1769 15.5638 40.8957 15.9043 40.6458C15.9662 40.5833 16.059 40.5833 16.121 40.6145C26.7689 45.5195 38.2525 45.5195 48.7766 40.6145C48.8385 40.5833 48.9314 40.5833 48.9933 40.6458C49.3338 40.9269 49.6742 41.1769 50.0147 41.458C50.1385 41.5518 50.1385 41.7392 49.9838 41.8017C48.3742 42.7702 46.6718 43.5512 44.9075 44.2386C44.7836 44.2698 44.7527 44.426 44.7836 44.5197C45.7741 46.4255 46.8885 48.2375 48.0956 49.9558C48.1885 49.9871 48.2814 50.0183 48.3742 49.9871C53.6982 48.3312 59.0531 45.8319 64.6247 41.708C64.6866 41.6767 64.7175 41.6142 64.7175 41.5518C66.0795 27.3992 62.4579 15.1212 55.122 4.21779C55.0911 4.18655 55.0601 4.15531 54.9982 4.15531ZM21.7235 34.085C18.5353 34.085 15.8733 31.117 15.8733 27.4617C15.8733 23.8064 18.4734 20.8384 21.7235 20.8384C25.0045 20.8384 27.6046 23.8377 27.5736 27.4617C27.5736 31.117 24.9736 34.085 21.7235 34.085ZM43.2979 34.085C40.1097 34.085 37.4477 31.117 37.4477 27.4617C37.4477 23.8064 40.0478 20.8384 43.2979 20.8384C46.5789 20.8384 49.179 23.8377 49.148 27.4617C49.148 31.117 46.5789 34.085 43.2979 34.085Z"
+                                fill="white" />
+                        </svg>
+
+                        <svg width="65" height="50" viewBox="0 0 65 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.30654 36.4516C-1.11281 38.0645 -0.306363 41.129 4.85493 42.5806C10.1775 44.3548 15.984 44.8387 21.6291 43.871C21.9517 43.871 22.2743 43.7097 22.4356 43.7097V38.2258L16.9517 40C14.8549 40.6452 12.7582 40.8065 10.6614 40.3226C9.04848 39.8387 9.37106 38.871 11.3065 38.0645L22.4356 34.1936V28.2258L6.9517 33.5484C5.01622 34.1935 3.08073 35.1613 1.30654 36.4516ZM38.7259 12.2581V27.9032C45.3388 31.129 50.5001 27.9032 50.5001 19.5161C50.5001 10.9677 47.4356 7.09677 38.5646 4.03226C33.8872 2.41935 29.0485 0.967742 24.2098 0V46.6129L35.5001 50V10.8065C35.5001 9.03226 35.5001 7.74194 36.7904 8.22581C38.5646 8.70968 38.7259 10.4839 38.7259 12.2581ZM59.6936 32.7419C55.0162 31.129 50.0162 30.4839 45.1775 30.9677C42.5969 31.129 40.1775 31.7742 37.9194 32.5806L37.4356 32.7419V39.0323L47.9194 35.1613C50.0162 34.5161 52.113 34.3548 54.2098 34.8387C55.8227 35.3226 55.5001 36.2903 53.5646 37.0968L37.4356 43.0645V49.1936L59.6936 40.9677C61.3065 40.3226 62.7582 39.5161 64.0485 38.2258C65.1775 36.6129 64.6936 34.3548 59.6936 32.7419Z"
+                                fill="white" />
+                        </svg>
+
+                        <svg width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.93598 7.76065C11.6087 2.83818 18.3356 -0.0214124 25.1228 0.000120744C25.1228 3.45834 25.1272 6.92086 25.1228 10.3791C20.5363 10.4221 15.9885 12.6271 13.3098 16.3825C9.92909 20.926 9.58456 27.4634 12.4786 32.3342C14.9894 36.8131 20.0195 39.5952 25.1228 39.621C25.1272 43.0793 25.1272 46.5418 25.1228 50C19.1409 50.0043 13.1935 47.8165 8.68017 43.8889C3.34857 39.3368 0.0712305 32.4548 0.00663114 25.4307C-0.148407 18.9277 2.42265 12.4376 6.93598 7.76065ZM25.4458 20.5039H47.8144C47.8144 27.9802 47.8187 35.4565 47.8101 42.9285C44.3777 42.9242 40.9411 42.9242 37.5087 42.9285C37.5001 38.9018 37.5087 34.8708 37.5044 30.8441C33.4863 30.8398 29.4682 30.8398 25.4501 30.8441C25.4415 27.3988 25.4458 23.9492 25.4458 20.5039Z"
+                                fill="white" />
+                        </svg>
+
+
+
+                        <svg class="me-5" width="52" height="50" viewBox="0 0 52 50" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.738 16.6462L14.3723 9.824L18.4052 2.45605L25.6822 5.12438L19.5875 15.5849L17.738 16.3128V16.6462ZM31.0788 15.3424L33.5955 16.3736L43.8445 30.8975V12.1891L36.7488 9.49062L31.0788 15.3424Z"
+                                fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M31.0784 15.3423L32.5045 13.8567V2.42578L25.6819 5.12426L19.5872 15.5848L25.6819 13.1288L31.0784 15.3423Z"
+                                fill="#454648" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M25.6815 5.12431L18.4045 2.45598L25.4085 0L32.5042 2.42583L25.6815 5.12431ZM7.57956 12.1283L-0.000732422 9.0357L6.9731 6.76149L14.1898 9.45997L7.57956 12.1283ZM36.7481 9.49054L44.2383 6.39753L51.5154 9.0357L43.8438 12.189L36.7481 9.49054ZM17.7373 16.3128L25.6815 13.1289L33.5948 16.3735L25.7724 19.5875L17.7373 16.3128Z"
+                                fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.189 39.5386L7.24536 26.8951V42.3895L14.189 39.5386ZM25.7716 19.5875L33.594 16.3734L43.843 30.8974V12.189L51.5146 9.03564V39.4179L44.2375 42.4192L33.3213 28.32V46.8764L25.7716 49.9999V19.5875Z"
+                                fill="#D5D5D5" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.737 16.3127L25.7722 19.5875V49.9999L18.2526 46.9069L7.24593 26.8951V42.3895L-0.000976562 39.4179V9.03564L7.57931 12.1282L17.737 31.867V16.3127Z"
+                                fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.7371 31.867L7.57935 12.1283L14.1896 9.45996L17.7371 16.6461V31.867Z"
+                                fill="#454648" />
+                        </svg>
+
+                    </div>
+
+                    <div class="slider-img"
+                        style="animation: 20s slides infinite linear;flex: 0 0 142px;display: flex;gap: 100px;">
+
+
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.00285454 40.2989C0.00121972 41.8005 1.11013 43.0721 2.59805 43.2747L16.9674 45.2315C18.768 45.4767 20.3714 44.0775 20.3722 42.2603L20.3781 29.0302C20.3788 27.3795 19.0458 26.0383 17.3952 26.0289L3.03228 25.9472C1.37006 25.9377 0.0170261 27.2816 0.0152164 28.9439L0.00285454 40.2989ZM17.3827 23.8015C19.031 23.7908 20.362 22.4523 20.3633 20.8039L20.3738 7.55943C20.3752 5.73918 18.7684 4.33708 16.9651 4.58501L2.60697 6.55909C1.12207 6.76325 0.0156948 8.03205 0.0155918 9.53093L0.0148109 20.8943C0.0146965 22.5588 1.36975 23.9052 3.03425 23.8944L17.3827 23.8015ZM22.8302 43.4641C22.8302 44.9536 23.9231 46.2176 25.397 46.4327L46.4065 49.4989C48.2166 49.7631 49.8398 48.3597 49.8398 46.5304V29.2722C49.8398 27.6246 48.5111 26.2854 46.8635 26.2723L25.854 26.1057C24.1879 26.0925 22.8302 27.4394 22.8302 29.1056V43.4641ZM46.8501 23.6021C48.5053 23.5994 49.8456 22.2565 49.8452 20.6013L49.8405 3.45219C49.84 1.62891 48.2266 0.227644 46.4212 0.482452L25.4058 3.44851C23.9278 3.65712 22.8279 4.92066 22.8251 6.41336L22.798 20.6308C22.7948 22.2918 24.1419 23.6392 25.8029 23.6365L46.8501 23.6021Z"
+                                fill="white" />
+                        </svg>
+
+                        <svg width="65" height="50" viewBox="0 0 65 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M54.9982 4.15531C50.8814 2.21831 46.4242 0.812431 41.7812 0.000143707C41.7405 -0.00117033 41.7 0.0065404 41.6625 0.0227339C41.6251 0.0389274 41.5916 0.0632104 41.5645 0.0938698C41.0074 1.12485 40.3573 2.46825 39.924 3.49923C34.9993 2.74942 29.9911 2.74942 25.0664 3.49923C24.6331 2.43701 23.9831 1.12485 23.395 0.0938698C23.364 0.0313862 23.2711 0.000143707 23.1783 0.000143707C18.5353 0.812431 14.109 2.21831 9.96126 4.15531C9.9303 4.15531 9.89935 4.18655 9.8684 4.21779C1.44912 16.9332 -0.872373 29.305 0.272896 41.5518C0.272896 41.6142 0.30385 41.6767 0.365756 41.708C5.93734 45.8319 11.2922 48.3312 16.5852 49.9871C16.6781 50.0183 16.771 49.9871 16.8019 49.9246C18.0401 48.2063 19.1544 46.3942 20.1139 44.4885C20.1758 44.3635 20.1139 44.2386 19.9901 44.2073C18.2258 43.52 16.5543 42.7077 14.9138 41.7705C14.79 41.708 14.79 41.5205 14.8828 41.4268C15.2233 41.1769 15.5638 40.8957 15.9043 40.6458C15.9662 40.5833 16.059 40.5833 16.121 40.6145C26.7689 45.5195 38.2525 45.5195 48.7766 40.6145C48.8385 40.5833 48.9314 40.5833 48.9933 40.6458C49.3338 40.9269 49.6742 41.1769 50.0147 41.458C50.1385 41.5518 50.1385 41.7392 49.9838 41.8017C48.3742 42.7702 46.6718 43.5512 44.9075 44.2386C44.7836 44.2698 44.7527 44.426 44.7836 44.5197C45.7741 46.4255 46.8885 48.2375 48.0956 49.9558C48.1885 49.9871 48.2814 50.0183 48.3742 49.9871C53.6982 48.3312 59.0531 45.8319 64.6247 41.708C64.6866 41.6767 64.7175 41.6142 64.7175 41.5518C66.0795 27.3992 62.4579 15.1212 55.122 4.21779C55.0911 4.18655 55.0601 4.15531 54.9982 4.15531ZM21.7235 34.085C18.5353 34.085 15.8733 31.117 15.8733 27.4617C15.8733 23.8064 18.4734 20.8384 21.7235 20.8384C25.0045 20.8384 27.6046 23.8377 27.5736 27.4617C27.5736 31.117 24.9736 34.085 21.7235 34.085ZM43.2979 34.085C40.1097 34.085 37.4477 31.117 37.4477 27.4617C37.4477 23.8064 40.0478 20.8384 43.2979 20.8384C46.5789 20.8384 49.179 23.8377 49.148 27.4617C49.148 31.117 46.5789 34.085 43.2979 34.085Z"
+                                fill="white" />
+                        </svg>
+
+                        <svg width="65" height="50" viewBox="0 0 65 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.30654 36.4516C-1.11281 38.0645 -0.306363 41.129 4.85493 42.5806C10.1775 44.3548 15.984 44.8387 21.6291 43.871C21.9517 43.871 22.2743 43.7097 22.4356 43.7097V38.2258L16.9517 40C14.8549 40.6452 12.7582 40.8065 10.6614 40.3226C9.04848 39.8387 9.37106 38.871 11.3065 38.0645L22.4356 34.1936V28.2258L6.9517 33.5484C5.01622 34.1935 3.08073 35.1613 1.30654 36.4516ZM38.7259 12.2581V27.9032C45.3388 31.129 50.5001 27.9032 50.5001 19.5161C50.5001 10.9677 47.4356 7.09677 38.5646 4.03226C33.8872 2.41935 29.0485 0.967742 24.2098 0V46.6129L35.5001 50V10.8065C35.5001 9.03226 35.5001 7.74194 36.7904 8.22581C38.5646 8.70968 38.7259 10.4839 38.7259 12.2581ZM59.6936 32.7419C55.0162 31.129 50.0162 30.4839 45.1775 30.9677C42.5969 31.129 40.1775 31.7742 37.9194 32.5806L37.4356 32.7419V39.0323L47.9194 35.1613C50.0162 34.5161 52.113 34.3548 54.2098 34.8387C55.8227 35.3226 55.5001 36.2903 53.5646 37.0968L37.4356 43.0645V49.1936L59.6936 40.9677C61.3065 40.3226 62.7582 39.5161 64.0485 38.2258C65.1775 36.6129 64.6936 34.3548 59.6936 32.7419Z"
+                                fill="white" />
+                        </svg>
+
+                        <svg width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.93598 7.76065C11.6087 2.83818 18.3356 -0.0214124 25.1228 0.000120744C25.1228 3.45834 25.1272 6.92086 25.1228 10.3791C20.5363 10.4221 15.9885 12.6271 13.3098 16.3825C9.92909 20.926 9.58456 27.4634 12.4786 32.3342C14.9894 36.8131 20.0195 39.5952 25.1228 39.621C25.1272 43.0793 25.1272 46.5418 25.1228 50C19.1409 50.0043 13.1935 47.8165 8.68017 43.8889C3.34857 39.3368 0.0712305 32.4548 0.00663114 25.4307C-0.148407 18.9277 2.42265 12.4376 6.93598 7.76065ZM25.4458 20.5039H47.8144C47.8144 27.9802 47.8187 35.4565 47.8101 42.9285C44.3777 42.9242 40.9411 42.9242 37.5087 42.9285C37.5001 38.9018 37.5087 34.8708 37.5044 30.8441C33.4863 30.8398 29.4682 30.8398 25.4501 30.8441C25.4415 27.3988 25.4458 23.9492 25.4458 20.5039Z"
+                                fill="white" />
+                        </svg>
+
+
+
+                        <svg width="52" height="50" viewBox="0 0 52 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.738 16.6462L14.3723 9.824L18.4052 2.45605L25.6822 5.12438L19.5875 15.5849L17.738 16.3128V16.6462ZM31.0788 15.3424L33.5955 16.3736L43.8445 30.8975V12.1891L36.7488 9.49062L31.0788 15.3424Z"
+                                fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M31.0784 15.3423L32.5045 13.8567V2.42578L25.6819 5.12426L19.5872 15.5848L25.6819 13.1288L31.0784 15.3423Z"
+                                fill="#454648" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M25.6815 5.12431L18.4045 2.45598L25.4085 0L32.5042 2.42583L25.6815 5.12431ZM7.57956 12.1283L-0.000732422 9.0357L6.9731 6.76149L14.1898 9.45997L7.57956 12.1283ZM36.7481 9.49054L44.2383 6.39753L51.5154 9.0357L43.8438 12.189L36.7481 9.49054ZM17.7373 16.3128L25.6815 13.1289L33.5948 16.3735L25.7724 19.5875L17.7373 16.3128Z"
+                                fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.189 39.5386L7.24536 26.8951V42.3895L14.189 39.5386ZM25.7716 19.5875L33.594 16.3734L43.843 30.8974V12.189L51.5146 9.03564V39.4179L44.2375 42.4192L33.3213 28.32V46.8764L25.7716 49.9999V19.5875Z"
+                                fill="#D5D5D5" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.737 16.3127L25.7722 19.5875V49.9999L18.2526 46.9069L7.24593 26.8951V42.3895L-0.000976562 39.4179V9.03564L7.57931 12.1282L17.737 31.867V16.3127Z"
+                                fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.7371 31.867L7.57935 12.1283L14.1896 9.45996L17.7371 16.6461V31.867Z"
+                                fill="#454648" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid sacond-container py-5" style="background: #090228;">
+        <div class="container ptx-5 justify-content-center">
+            <h1 data-aos="zoom-in" data-aos-duration="2000" class="text-white text-center fs-2"
+                style="  font-family: Encode Sans Condensed, sans-serif;font-weight: bolder;">PLAN YOUR EPIC MATCHES
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="2000"
+                style="color: rgb(70, 201, 70);  font-family: Encode Sans Condensed, sans-serif;"
+                class="text-center fs-5">Live Streaming</p>
+            <p data-aos="fade-up" data-aos-duration="2000" style="color: lightgray;font-size: 11px;"
+                class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                <br> Ipsum has been the
+                industry's standard dummy text.
+            </p>
+
+            <div data-aos="fade-up" data-aos-duration="3000" class="hhd d-md-flex py-5">
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <div class=" h-3" style="width: 424px;">
+                        <img class="img-fluid w-100 h-100" src="Screenshot 2024-03-04 085401.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 mt-md-0 mt-5 d-flex align-items-center justify-content-center">
+                    <div class=" h-3" style="width: 424px;">
+                        <img class="img-fluid w-100 h-100" src="Screenshot 2024-03-04 085622.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="third-container container-fluid">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6 h-4 d-flex align-items-center pt-5 flex-column">
+                    <h1 data-aos="zoom" data-aos-duration="3000" class="text-white fs-2 mt-4x"
+                        style="  font-family: Encode Sans Condensed, sans-serif;font-weight: bolder;">GAME CRAFTERS
+                        SHAPING DIGITAL REALMS</h1>
+                    <p class="" style="color: lightgray;font-size: 15px;">Lorem Ipsum is simply dummy text of the
+                        printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                        since the 1500s, when an unknown printer took.</p>
+                    <div class="content row w-100 mt-4" style="height: 80px;">
+                        <div class="col-4 d-flex align-items-center justify-content-start">
+                            <h1 style="color: white; font-family: Encode Sans Condensed, sans-serif;line-height: 20px;">
+                                800<br><span style="font-size: 15px;margin-left: -10px;color: lightgray;"
+                                    class="text-center">Win-Matches</span></h1>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center"
+                            style="border-left: 2px solid white;border-right: 2px solid white;">
+                            <h1 style="color: white; font-family: Encode Sans Condensed, sans-serif;line-height: 20px;">
+                                935<br><span style="font-size: 15px;margin-left: -10px;color: lightgray;"
+                                    class="text-center">Matches Played</span></h1>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center">
+                            <h1 class="text-center"
+                                style="color: white; font-family: Encode Sans Condensed, sans-serif;line-height: 20px;">
+                                24<br><span
+                                    style="font-size: 15px;margin-left: -10px;color: lightgray;font-weight: bolder;"
+                                    class="text-center">
+                                    Tournament Won</span></h1>
+                        </div>
+                        <div class="mini-button w-100 mt-5">
+                            <button class="multy-color text-white fw-bolde"
+                                style="font-size: 13px;background: none;padding:10px 30px;border: 2px solid white;">Contact
+                                Us</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 h-4 mt-md-0 mt-5" style="position: relative;">
+                    <div class="row h-100">
+                        <div class="col-6 h-100 d-flex align-items-center">
+                            <img class="img-fluid" src="crafter-1.webp" alt="">
+                        </div>
+                        <div class="col-6 h-100">
+                            <img class="img-fluid" src="crafter-2.webp" alt="">
+                            <img class="img-fluid mt-5" src="crafter-3.webp" alt="">
+                        </div>
+                    </div>
+                    <h1 class="designer-text"
+                        style="-webkit-text-stroke:2px green ;color: rgba(0, 255, 13, 0);font-size: 55px;position: absolute;top: 20px;left: 80px;">
+                        TEST</h1>
+                    <h1 class="designer-text"
+                        style="-webkit-text-stroke:2px green ;color: rgba(0, 255, 13, 0);font-size: 55px;position: absolute;right: 130px;top: 170px;">
+                        Your</h1>
+                    <h1 class="designer-text"
+                        style="-webkit-text-stroke:2px green ;color: rgba(0, 255, 13, 0);font-size: 70px;position: absolute;bottom: 0px;left: 150px;">
+                        LIMITS</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5" style="background-color: #090228;">
+        <div class="container py-5 d-flex flex-column align-items-center justify-content-center">
+            <div data-aos="zoom-in" data-aos-duration="2000"
+                class="fadeup col-md d-flex flex-column align-items-center ">
+                <h1 class="text-white text-center fs-2"
+                    style="  font-family: Encode Sans Condensed, sans-serif;font-weight: bolder;">FACILITIES WE OFFER
+                </h1>
+                <p style="font-size: 13px;color: lightgray;" class="text-center w-50 mt-2">Lorem Ipsum is simply dummy
+                    text of the
+                    printing and typesetting industry. Has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took.</p>
+            </div>
+
+            <div class="row d-flex align-items-center justify-content-around mt-4">
+                <div class="multy-color mt-md-0 mt-4 col-md-3 col-sm-9 d-flex h-5 align-items-center justify-content-center"
+                    style="background-color: #0d023f;" data-aos="fade-up" data-aos-delay="50">
+                    <div class="btnTwo d-flex flex-column align-items-center justify-content-center">
+                        <figure class="img-fluid"><img class="img-fluid " style="width: 50px;height: 50px;"
+                                src="facilities-1.svg" alt="facilitiesIcon"></figure>
+                        <h5 class="text-center text-white fs-6 mt-2">ESports Competition</h5>
+                        <p class="text-center mt-4" style="font-size: 12px;color: lightgray;">Lorem ipsum dolor sit
+                            ametcsectetur. Eu enim odio facilisis eu curabitur integer.</p>
+                        <a href="#" style="text-decoration: none;">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="multy-color mt-md-0 mt-4 col-md-3 col-sm-9 d-flex h-5 align-items-center justify-content-center"
+                    style="background-color: #0d023f;" data-aos="fade-up" data-aos-delay="50">
+                    <div class="btnTwo d-flex flex-column align-items-center justify-content-center">
+                        <figure class="img-fluid"><img class="img-fluid " style="width: 50px;height: 50px;"
+                                src="facilities-2.svg" alt="facilitiesIcon"></figure>
+                        <h5 class="text-center text-white fs-6 mt-2">Latest Gaming Tech</h5>
+                        <p class="text-center mt-4" style="font-size: 12px;color: lightgray;">Lorem ipsum dolor sit
+                            ametcsectetur. Eu enim odio facilisis eu curabitur integer.</p>
+                        <a href="#" style="text-decoration: none;">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="multy-color mt-md-0 mt-4 col-md-3 col-sm-9 d-flex h-5 align-items-center justify-content-center"
+                    style="background-color: #0d023f;" data-aos="fade-up" data-aos-delay="50">
+                    <div class="btnTwo d-flex flex-column align-items-center justify-content-center">
+                        <figure class="img-fluid"><img class="img-fluid " style="width: 50px;height: 50px;"
+                                src="facilities-3.svg" alt="facilitiesIcon"></figure>
+                        <h5 class="text-center text-white fs-6 mt-2">Comfortable Environment</h5>
+                        <p class="text-center mt-4" style="font-size: 12px;color: lightgray;">Lorem ipsum dolor sit
+                            ametcsectetur. Eu enim odio facilisis eu curabitur integer.</p>
+                        <a href="#" style="text-decoration: none;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <button class="multy-color text-white fw-bolde mt-5"
+                style="font-size: 13px;background: none;padding:10px 30px;border: 2px solid white;">Contact
+                Us</button>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5" style="background: #06001f;">
+        <div class="container py-5">
+            <div data-aos="zoom-in" data-aos-duration="2000"
+                class="fadeup col-md d-flex flex-column align-items-center ">
+                <h1 class="text-white text-center fs-2"
+                    style="  font-family: Encode Sans Condensed, sans-serif;font-weight: bolder;">FACILITIES WE OFFER
+                </h1>
+                <p style="font-size: 13px;color: lightgray;" class="text-center w-50 mt-2">Lorem Ipsum is simply dummy
+                    text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                    text ever since the 1500s</p>
+            </div>
+            <div class="matches_buttons d-flex justify-content-center gap-lg-4 gap-md-3 gap-1 mt-4">
+                <button data-name="all" class="activeTwo">All Matches</button>
+                <button data-name="past" class="activeTwo">Past Matches</button>
+                <button data-name="live" class="activeTwo">Live Stream</button>
+                <button data-name="upcoming" class="activeTwo">Upcoming Matches</button>
+            </div>
+
+            <div class="match_date ">
+                <div data-name="upcoming" class="match_card row justify-content-between align-items-center active">
+                    <div class="col-md-2 d-flex justify-content-md-start justify-content-center">
+                        <div><img src="game-logo-1.webp" alt="gameLogo"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center gap-4 p-md-0 pt-4 pb-md-0 pb-3">
+                            <p class="text-white">Monday ,22nd Feb 2023 Live At 04:00 pm</p>
+                            <div class="d-flex gap-4" style="margin-top: -20px;">
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="d-flex justify-content-md-between justify-content-evenly align-items-center">
+                            <div>
+                                <figure><img src="player-logo-2.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Pro Slayer</p>
+                            </div>
+                            <div><img src="vs.webp" alt="vs_2"></div>
+                            <div>
+                                <figure><img src="player-logo-1.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Bare Killer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-name="upcoming"
+                    class="match_card mt-md-0 mt-4 row justify-content-between align-items-center">
+                    <div class="col-md-2 d-flex justify-content-md-start justify-content-center">
+                        <div><img src="game-logo-2.webp" alt="gameLogo"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center gap-4 p-md-0 pt-4 pb-md-0 pb-3">
+                            <p class="text-white">Tuesday ,23rd Feb 2023 Live At 05:00 pm</p>
+                            <div class="d-flex gap-4" style="margin-top: -20px;">
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="d-flex justify-content-md-between justify-content-evenly align-items-center">
+                            <div>
+                                <figure><img src="player-logo-4.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Top Dogs</p>
+                            </div>
+                            <div><img src="vs.webp" alt="vs_2"></div>
+                            <div>
+                                <figure><img src="player-logo-3.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Pro Falcons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-name="upcoming"
+                    class="match_card mt-md-0 mt-4 row justify-content-between align-items-center">
+                    <div class="col-md-2 d-flex justify-content-md-start justify-content-center">
+                        <div><img src="game-logo-1.webp" alt="gameLogo"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center gap-4 p-md-0 pt-4 pb-md-0 pb-3">
+                            <p class="text-white">Wednesday ,24th Feb 2023 Live At 09:00 pm</p>
+                            <div class="d-flex gap-4" style="margin-top: -20px;">
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="d-flex justify-content-md-between justify-content-evenly align-items-center">
+                            <div>
+                                <figure><img src="player-logo-2.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Pro Slayer</p>
+                            </div>
+                            <div><img src="vs.webp" alt="vs_2"></div>
+                            <div>
+                                <figure><img src="player-logo-3.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Pro Falcons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-name="upcoming"
+                    class="match_card mt-md-0 mt-4 row justify-content-between align-items-center">
+                    <div class="col-md-2 d-flex justify-content-md-start justify-content-center">
+                        <div><img src="game-logo-3.webp" alt="gameLogo"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center gap-4 p-md-0 pt-4 pb-md-0 pb-3">
+                            <p class="text-white">Friday ,25th Feb 2023 Live At 10:00 pm</p>
+                            <div class="d-flex gap-4" style="margin-top: -20px;">
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="d-flex justify-content-md-between justify-content-evenly align-items-center">
+                            <div>
+                                <figure><img src="player-logo-4.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Top Dogs</p>
+                            </div>
+                            <div><img src="vs.webp" alt="vs_2"></div>
+                            <div>
+                                <figure><img src="player-logo-1.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Bare Killer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-name="live" class="match_card mt-md-0 mt-4 row justify-content-between align-items-center">
+                    <div class="col-md-2 d-flex justify-content-md-start justify-content-center">
+                        <div><img src="game-logo-2.webp" alt="gameLogo"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center gap-4 p-md-0 pt-4 pb-md-0 pb-3">
+                            <p class="text-white">Monday ,28th Feb 2023 Live At 5:00 pm</p>
+                            <div class="d-flex gap-4" style="margin-top: -20px;">
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="d-flex justify-content-md-between justify-content-evenly align-items-center">
+                            <div>
+                                <figure><img src="player-logo-4.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Top Dogs</p>
+                            </div>
+                            <div><img src="vs.webp" alt="vs_2"></div>
+                            <div>
+                                <figure><img src="player-logo-3.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Pro Falcons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-name="past" class="match_card mt-md-0 mt-4 row justify-content-between align-items-center">
+                    <div class="col-md-2 d-flex justify-content-md-start justify-content-center">
+                        <div><img src="game-logo-1.webp" alt="gameLogo"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center gap-4 p-md-0 pt-4 pb-md-0 pb-3">
+                            <p class="text-white">Tuesday ,23rd Feb 2023 Live At 4:00 pm</p>
+                            <div class="d-flex gap-4" style="margin-top: -20px;">
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="d-flex justify-content-md-between justify-content-evenly align-items-center">
+                            <div>
+                                <figure><img src="player-logo-2.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Pro Slayer</p>
+                            </div>
+                            <div><img src="vs.webp" alt="vs_2"></div>
+                            <div>
+                                <figure><img src="player-logo-1.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Bare Killer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-name="past" class="match_card mt-md-0 mt-4 row justify-content-between align-items-center">
+                    <div class="col-md-2 d-flex justify-content-md-start justify-content-center">
+                        <div><img src="game-logo-3.webp" alt="gameLogo"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center gap-4 p-md-0 pt-4 pb-md-0 pb-3">
+                            <p class="text-white">Thursday ,25th Feb 2023 Live At 10:00 pm</p>
+                            <div class="d-flex gap-4" style="margin-top: -20px;">
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="d-flex justify-content-md-between justify-content-evenly align-items-center">
+                            <div>
+                                <figure><img src="player-logo-4.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Top Dogs</p>
+                            </div>
+                            <div><img src="vs.webp" alt="vs_2"></div>
+                            <div>
+                                <figure><img src="player-logo-1.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Bare Killer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-name="past" class="match_card mt-md-0 mt-4 row justify-content-between align-items-center">
+                    <div class="col-md-2 d-flex justify-content-md-start justify-content-center">
+                        <div><img src="game-logo-1.webp" alt="gameLogo"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center gap-4 p-md-0 pt-4 pb-md-0 pb-3">
+                            <p class="text-white">Thursday ,25th Feb 2023 Live At 10:00 pm</p>
+                            <div class="d-flex gap-4" style="margin-top: -20px;">
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="d-flex justify-content-md-between justify-content-evenly align-items-center">
+                            <div>
+                                <figure><img src="player-logo-2.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Pro Slayer</p>
+                            </div>
+                            <div><img src="vs.webp" alt="vs_2"></div>
+                            <div>
+                                <figure><img src="player-logo-3.webp" alt="player"></figure>
+                                <p class="text-white ms-3">Pro Falcons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5" style="background:#0d023f ;">
+        <div class="container py-5">
+            <div data-aos="zoom-in" data-aos-duration="2000"
+                class="fadeup col-md d-flex flex-column align-items-center ">
+                <h1 class="text-white text-center fs-2"
+                    style="  font-family: Encode Sans Condensed, sans-serif;font-weight: bolder;">
+                    DIVE INTO DIVERSE WORLDS OF PLAY
+                </h1>
+                <p style="font-size: 13px;color: lightgray;" class="text-center w-50 mt-2">Lorem Ipsum is simply dummy
+                    text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                    text.</p>
+            </div>
+
+            <div class=" row mt-3 d-flex align-items-center justify-content-center gap-3">
+                <div data-aos="fade-down" data-aos-duration="2000"
+                    class="col-md-5 d-flex align-items-center justify-content-center" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100 monotise" src="Screenshot 2024-03-13 193644.png" alt="">
+                </div>
+                <div data-aos="fade-left" data-aos-duration="2000"
+                    class="col-md-5 d-flex align-items-center justify-content-center" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100 monotise" src="Screenshot-2.png" alt="">
+                </div>
+                <div data-aos="fade-right" data-aos-duration="2000"
+                    class="col-md-5 d-flex align-items-center justify-content-center" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100 monotise" src="Screenshot-3.png" alt="">
+                </div>
+                <div data-aos="fade-up" data-aos-duration="2000"
+                    class="col-md-5 d-flex align-items-center justify-content-center" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100 monotise" src="Screenshot-4.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex align-items-center justify-content-center py-5">
+
+        <div class="row my-5 w-100 d-flex align-items-center justify-content-between" style="background: #2b2b64;">
+
+            <div class="col-md-6 ">
+                <img class="img-fluid w-100" src="Screenshot-sec-left.png" alt="">
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid w-100" src="Screenshot-sec-right.png" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <section id="pricing">
+        <div class="container">
+            <div class="row" style="position: relative;">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div>
+                        <figure><img src="pricing.webp" alt="pricing"></figure>
+                    </div>
+                </div>
+                <h1 class="designer-text"
+                    style="-webkit-text-stroke:2px green ;color: rgba(0, 255, 13, 0);font-size: 70px;position: absolute;top: -100;left: 10px;">
+                    DREAM BIGGER</h1>
+                <div class="col-md-6">
+                    <div class="price_content" data-aos="fade">
+                        <h3>Pricing Plan</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text.Lorem Ipsum is simply.</p>
+                    </div>
+                    <div class="row justify-content-center gap-md-0 gap-4">
+                        <div class="col-md-6 col-sm-10" data-aos="fade-up">
+                            <div class="price_card">
+                                <h5>Premium Pakage</h5>
+                                <div>
+                                    <h2>$350</h2>
+                                    <h6>/month</h6>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-circle"></i>
+                                    <p>Lorem Ipsum is simply dummy text of the real printing.</p>
+                                </div>
+                                <div class="globalBtn mt-3">
+                                    <button class="btn btn-outline-success mt-1">Get Started</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-10" data-aos="fade-up" data-aos-delay="200">
+                            <div class="price_card scnd">
+                                <h5>Basic Pakage</h5>
+                                <div>
+                                    <h2>$150</h2>
+                                    <h6>/month</h6>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-circle"></i>
+                                    <p>Lorem Ipsum is simply dummy text of the real printing.</p>
+                                </div>
+                                <div class="globalBtn mt-3">
+                                    <button class="btn btn-outline-success mt-1">Get Started</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="testimonials" class="overflow-hidden py-5">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 col-sm-9" data-aos="fade-down">
+                    <div>
+                        <figure><img src="customer.webp" alt="testimonialsImg"></figure>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-9 pb-lg-4 pb-3" data-aos="fade-up">
+                    <div>
+                        <h3>Customer Says</h3>
+                        <div class="testimonials-slider">
+                            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="10000">
+                                        <div class="testimonial_card">
+                                            <div>
+                                                <figure><img src="testimonials-1.webp" alt="testimonials-1">
+                                                </figure>
+                                                <h6>Hector Salamanca</h6>
+                                                <div class="d-flex flex-row gap-2">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing elit, sed do eiusmod tempor incididunt</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                        <div class="testimonial_card">
+                                            <div>
+                                                <figure><img src="testimonials-2.webp" alt="testimonials-1">
+                                                </figure>
+                                                <h6>Steve Burr</h6>
+                                                <div class="d-flex flex-row gap-2">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing elit, sed do eiusmod tempor incididunt</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="testimonial_card">
+                                            <div>
+                                                <figure><img src="testimonials-3.webp" alt="testimonials-1">
+                                                </figure>
+                                                <h6>Chris Hemswoth</h6>
+                                                <div class="d-flex flex-row gap-2">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing elit, sed do eiusmod tempor incididunt</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <!-- Remove the container if you want to extend the Footer to full width. -->
+        <div class="container-fluid p-0">
+
+            <footer class="text-center text-white" style="background:#0d023f ;">
+                <!-- Grid container -->
+                <div class="container p-4 pb-0">
+                    <!-- Section: Social media -->
+                    <section class="mb-4">
+                        <!-- Facebook -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="#!"
+                            role="button"><i class="fab fa-facebook-f"></i></a>
+
+                        <!-- Twitter -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="#!"
+                            role="button"><i class="fab fa-twitter"></i></a>
+
+                        <!-- Google -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+                            role="button"><i class="fab fa-google"></i></a>
+
+                        <!-- Instagram -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+                            role="button"><i class="fab fa-instagram"></i></a>
+
+                        <!-- Linkedin -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!"
+                            role="button"><i class="fab fa-linkedin-in"></i></a>
+                        <!-- Github -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!"
+                            role="button"><i class="fab fa-github"></i></a>
+                    </section>
+                    <!-- Section: Social media -->
+                </div>
+                <!-- Grid container -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2020 Copyright:
+                    <a class="text-white" href="https://mdbootstrap.com/">Arenaleds.com</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+
+        </div>
+        <!-- End of .container -->
+    </section>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://kit.fontawesome.com/09f84ebc87.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
